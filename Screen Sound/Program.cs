@@ -6,8 +6,6 @@ List<int> quantidadeAvaliacao = new List<int>();
 #endregion
 
 #region Funções
-ExibirMensagemDeBoasVindas();
-
 void ExibirMensagemDeBoasVindas()
 {
     Console.WriteLine(@"
@@ -19,11 +17,12 @@ void ExibirMensagemDeBoasVindas()
 ╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░╚═╝");
     string mensagemDeBoasVindas = "\nBoas vindas ao Screen Sound!";
     Console.WriteLine(mensagemDeBoasVindas);
-    ExibirOpcoesDoMenu();
 }
 
 void ExibirOpcoesDoMenu()
 {
+    Console.Clear();
+    ExibirMensagemDeBoasVindas();
     Console.WriteLine("\nDigite 1 para registrar uma banda");
     Console.WriteLine("Digite 2 para mostrar todas as bandas");
     Console.WriteLine("Digite 3 para avaliar uma banda");
@@ -35,22 +34,49 @@ void ExibirOpcoesDoMenu()
     ChamarOpcaoEscolhida(opcaoEscolhida);
 }
 
+void VoltarAoMenu()
+{
+    Console.WriteLine("\nPressione qualquer tecla para voltar ao Menu:");
+    Console.ReadKey();
+    ExibirOpcoesDoMenu();
+}
+
 void ChamarOpcaoEscolhida(string opcao)
 {
     if (int.TryParse(opcao, out _))
     {
+        Thread.Sleep(1000);
+        Console.Clear();
         switch (int.Parse(opcao))
         {
             case 0:
+                Console.WriteLine("Até Logo.");
                 break;
             case 1:
-                RegistrarBanda(); break;
+                Console.WriteLine("---------------------");
+                Console.WriteLine("| Registro de Banda |");
+                Console.WriteLine("---------------------");
+                RegistrarBanda(); 
+                break;
             case 2:
-                MostrarTodasBandas(2); break;
+                Console.WriteLine("---------------------------");
+                Console.WriteLine("| Mostrar Todas as Bandas |");
+                Console.WriteLine("---------------------------");
+                MostrarTodasBandas(2); 
+                break;
             case 3:
-                AvaliarBanda(); break;
+                Console.WriteLine("-----------------");
+                Console.WriteLine("| Avaliar Banda |");
+                Console.WriteLine("-----------------");
+
+                AvaliarBanda();
+                break;
             case 4:
-                ExibirMediaAvaliacoesDaBanda(); break;
+                Console.WriteLine("-------------------------");
+                Console.WriteLine("| Exibir Média da Banda |");
+                Console.WriteLine("-------------------------");
+                ExibirMediaAvaliacoesDaBanda(); 
+                break;
             default:
                 Console.WriteLine("Opção Inválida."); ExibirOpcoesDoMenu(); break;
         }
@@ -59,13 +85,13 @@ void ChamarOpcaoEscolhida(string opcao)
 
 void RegistrarBanda()
 {
-    Console.WriteLine("\nVocê escolheu a opção de registrar banda");
-    Console.Write("Digite o nome da banda: ");
-    var nomeBanda = Console.ReadLine()!;
-    bandas.Add(nomeBanda);
+    Console.Write("\nDigite o nome da banda: ");
+    var nomeDaBanda = Console.ReadLine()!;
+    Console.WriteLine($"A banda \"{nomeDaBanda}\" foi cadastrada com sucesso!");
+    bandas.Add(nomeDaBanda);
     avaliacao.Add(0);
     quantidadeAvaliacao.Add(0);
-    ExibirOpcoesDoMenu();
+    VoltarAoMenu();
 }
 
 void MostrarTodasBandas(int opcao)
@@ -73,65 +99,60 @@ void MostrarTodasBandas(int opcao)
     var posicao = 1;
     bandas.ForEach(x => Console.WriteLine((posicao++) + " - " + x));
 
-    if(opcao == 2)
+    if (bandas.Count() == 0)
     {
-        ExibirOpcoesDoMenu();
+        Console.WriteLine("Nenhuma banda foi cadastrada ainda.");
+    }
+
+    if (opcao == 2 || bandas.Count() == 0)
+    {
+        VoltarAoMenu();
     }
 }
 
 void AvaliarBanda()
 {
     MostrarTodasBandas(0);
-    if(bandas.Count() > 0)
+    Console.Write("\nInforme o número da banda que deseja realizar a avalição: ");
+    string posicao = Console.ReadLine()!;
+
+    if(int.TryParse(posicao, out _) && bandas.Count() > (int.Parse(posicao) - 1))
     {
-        Console.Write("\nInforme o número da banda que deseja realizar a avalição: ");
-        string posicao = Console.ReadLine()!;
+        Console.Write($"Digite a sua avaliação a banda {bandas[int.Parse(posicao) - 1]}: ");
+        var avaliacaoBanda = Console.ReadLine()!;
 
-        if(int.TryParse(posicao, out _) && bandas.Count() >= (int.Parse(posicao) - 1))
-        {
-            Console.Write("Digite a sua avaliação a banda "+ bandas[int.Parse(posicao) - 1] +": ");
-            var avaliacaoBanda = Console.ReadLine()!;
-
-            if(float.TryParse(avaliacaoBanda, out _)){
-                avaliacao[((int.Parse(posicao) - 1))] += float.Parse(avaliacaoBanda);
-                quantidadeAvaliacao[(int.Parse(posicao) - 1)]++;
-            }
-            Console.WriteLine();
-            ExibirOpcoesDoMenu();
+        if(float.TryParse(avaliacaoBanda, out _)){
+            avaliacao[((int.Parse(posicao) - 1))] += float.Parse(avaliacaoBanda);
+            quantidadeAvaliacao[(int.Parse(posicao) - 1)]++;
         }
-        else
-        {
-            Console.WriteLine("Avaliação inválida, repita o procedimento com uma avaliação válida.");
-            AvaliarBanda();
-        }
+        VoltarAoMenu();
     }
     else
     {
-        Console.WriteLine("Nenhuma banda foi cadastrada ainda.");
-        ExibirOpcoesDoMenu();
+        Console.WriteLine("Número da banda inválido, repita o procedimento com um número de banda válido.\n");
+        AvaliarBanda();
     }
 }
 
 void ExibirMediaAvaliacoesDaBanda()
 {
     MostrarTodasBandas(0);
-    if (bandas.Count() > 0)
-    {
-        Console.Write("\nInforme o número da banda que deseja ver a média de avalição: ");
-        string posicao = Console.ReadLine()!;
+    Console.Write("\nInforme o número da banda que deseja ver a média de avalição: ");
+    string posicao = Console.ReadLine()!;
 
-        if (int.TryParse(posicao, out _) && bandas.Count() >= (int.Parse(posicao) - 1))
-        {
-            int posicaoTratada = int.Parse(posicao) - 1;
-            float mediaAvaliacaoBanda = avaliacao[posicaoTratada] / quantidadeAvaliacao[posicaoTratada]; 
-            Console.WriteLine("A média de avaliação da banda " + bandas[posicaoTratada] + " é: " + mediaAvaliacaoBanda +"\n");
-            ExibirOpcoesDoMenu();
-        }
+    if (int.TryParse(posicao, out _) && bandas.Count() > (int.Parse(posicao) - 1))
+    {
+        int posicaoTratada = int.Parse(posicao) - 1;
+        float mediaAvaliacaoBanda = avaliacao[posicaoTratada] / quantidadeAvaliacao[posicaoTratada]; 
+        Console.WriteLine($"A média de avaliação da banda {bandas[posicaoTratada]} é: {mediaAvaliacaoBanda}\n");
+        VoltarAoMenu();
     }
     else
     {
-        Console.WriteLine("Nenhuma banda foi cadastrada ainda.");
-        ExibirOpcoesDoMenu();
+        Console.WriteLine("Número da banda inválido, repita o procedimento com um número de banda válido.\n");
+        ExibirMediaAvaliacoesDaBanda();
     }
 }
+
+ExibirOpcoesDoMenu();
 #endregion

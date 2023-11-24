@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\willi\\OneDrive\\Documentos\\Projetos\\Screen Sound\\Screen Sound\\Screen Sound.csproj": {}
+    "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Screen Sound\\Screen Sound.csproj": {}
   },
   "projects": {
-    "C:\\Users\\willi\\OneDrive\\Documentos\\Projetos\\Screen Sound\\Screen Sound\\Screen Sound.csproj": {
+    "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Screen Sound\\Screen Sound.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willi\\OneDrive\\Documentos\\Projetos\\Screen Sound\\Screen Sound\\Screen Sound.csproj",
+        "projectUniqueName": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Screen Sound\\Screen Sound.csproj",
         "projectName": "Screen Sound",
-        "projectPath": "C:\\Users\\willi\\OneDrive\\Documentos\\Projetos\\Screen Sound\\Screen Sound\\Screen Sound.csproj",
+        "projectPath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Screen Sound\\Screen Sound.csproj",
         "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willi\\OneDrive\\Documentos\\Projetos\\Screen Sound\\Screen Sound\\obj\\",
+        "outputPath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Screen Sound\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
