@@ -1,0 +1,14 @@
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\bin\Debug\net7.0\Apenas Numeros Pares.exe
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\bin\Debug\net7.0\Apenas Numeros Pares.deps.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\bin\Debug\net7.0\Apenas Numeros Pares.runtimeconfig.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\bin\Debug\net7.0\Apenas Numeros Pares.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\bin\Debug\net7.0\Apenas Numeros Pares.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\obj\Debug\net7.0\Apenas Numeros Pares.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\obj\Debug\net7.0\Apenas Numeros Pares.AssemblyInfoInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\obj\Debug\net7.0\Apenas Numeros Pares.AssemblyInfo.cs
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\obj\Debug\net7.0\Apenas Numeros Pares.csproj.CoreCompileInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\obj\Debug\net7.0\Apenas Numeros Pares.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\obj\Debug\net7.0\refint\Apenas Numeros Pares.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\obj\Debug\net7.0\Apenas Numeros Pares.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\obj\Debug\net7.0\Apenas Numeros Pares.genruntimeconfig.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Apenas Numeros Pares\obj\Debug\net7.0\ref\Apenas Numeros Pares.dll

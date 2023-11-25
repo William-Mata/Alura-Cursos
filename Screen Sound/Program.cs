@@ -1,8 +1,7 @@
 ﻿// SCREEN SOUND
+
 #region Variáveis 
-List<string> bandas = new List<string>();
-List<float> avaliacao = new List<float>();
-List<int> quantidadeAvaliacao = new List<int>();
+Dictionary<string, List<float>> bandas = new Dictionary<string, List<float>>();
 #endregion
 
 #region Funções
@@ -23,14 +22,15 @@ void ExibirOpcoesDoMenu()
 {
     Console.Clear();
     ExibirMensagemDeBoasVindas();
+
     Console.WriteLine("\nDigite 1 para registrar uma banda");
     Console.WriteLine("Digite 2 para mostrar todas as bandas");
     Console.WriteLine("Digite 3 para avaliar uma banda");
     Console.WriteLine("Digite 4 para exibir a média de uma banda");
     Console.WriteLine("Digite 0 para sair");
     Console.Write("\nDigite a sua opção: ");
-
     string opcaoEscolhida = Console.ReadLine()!;
+
     ChamarOpcaoEscolhida(opcaoEscolhida);
 }
 
@@ -53,28 +53,19 @@ void ChamarOpcaoEscolhida(string opcao)
                 Console.WriteLine("Até Logo.");
                 break;
             case 1:
-                Console.WriteLine("---------------------");
-                Console.WriteLine("| Registro de Banda |");
-                Console.WriteLine("---------------------");
+                FormatarTitulo("| Registro de Banda |");
                 RegistrarBanda(); 
                 break;
             case 2:
-                Console.WriteLine("---------------------------");
-                Console.WriteLine("| Mostrar Todas as Bandas |");
-                Console.WriteLine("---------------------------");
+                FormatarTitulo("| Mostrar Todas as Bandas |");
                 MostrarTodasBandas(2); 
                 break;
             case 3:
-                Console.WriteLine("-----------------");
-                Console.WriteLine("| Avaliar Banda |");
-                Console.WriteLine("-----------------");
-
+                FormatarTitulo("| Avaliar Banda |");
                 AvaliarBanda();
                 break;
             case 4:
-                Console.WriteLine("-------------------------");
-                Console.WriteLine("| Exibir Média da Banda |");
-                Console.WriteLine("-------------------------");
+                FormatarTitulo("| Exibir Média da Banda |");
                 ExibirMediaAvaliacoesDaBanda(); 
                 break;
             default:
@@ -88,16 +79,15 @@ void RegistrarBanda()
     Console.Write("\nDigite o nome da banda: ");
     var nomeDaBanda = Console.ReadLine()!;
     Console.WriteLine($"A banda \"{nomeDaBanda}\" foi cadastrada com sucesso!");
-    bandas.Add(nomeDaBanda);
-    avaliacao.Add(0);
-    quantidadeAvaliacao.Add(0);
+    bandas.Add(nomeDaBanda, new List<float>());
     VoltarAoMenu();
 }
 
 void MostrarTodasBandas(int opcao)
 {
     var posicao = 1;
-    bandas.ForEach(x => Console.WriteLine((posicao++) + " - " + x));
+    var nomesDasBandas = bandas.Keys.ToList(); 
+    nomesDasBandas.ForEach(x => Console.WriteLine((posicao++) + " - " + x));
 
     if (bandas.Count() == 0)
     {
@@ -113,45 +103,62 @@ void MostrarTodasBandas(int opcao)
 void AvaliarBanda()
 {
     MostrarTodasBandas(0);
-    Console.Write("\nInforme o número da banda que deseja realizar a avalição: ");
-    string posicao = Console.ReadLine()!;
 
-    if(int.TryParse(posicao, out _) && bandas.Count() > (int.Parse(posicao) - 1))
+    Console.Write("\nInforme o nome da banda que deseja realizar a avalição: ");
+    string nomeBanda = Console.ReadLine()!;
+    var banda = bandas.ToList().Where(x => x.Key.ToUpper() == nomeBanda.ToUpper()).FirstOrDefault();
+
+    if (banda.Key != null)
     {
-        Console.Write($"Digite a sua avaliação a banda {bandas[int.Parse(posicao) - 1]}: ");
+        Console.Write($"Digite a sua avaliação a banda {banda.Key}: ");
         var avaliacaoBanda = Console.ReadLine()!;
 
         if(float.TryParse(avaliacaoBanda, out _)){
-            avaliacao[((int.Parse(posicao) - 1))] += float.Parse(avaliacaoBanda);
-            quantidadeAvaliacao[(int.Parse(posicao) - 1)]++;
+            banda.Value.Add(float.Parse(avaliacaoBanda));
+            Console.WriteLine($"\nA nota {avaliacaoBanda} foi atribuida a banda {nomeBanda}");
         }
+
         VoltarAoMenu();
     }
     else
     {
-        Console.WriteLine("Número da banda inválido, repita o procedimento com um número de banda válido.\n");
-        AvaliarBanda();
+        Console.WriteLine($"A banda \"{nomeBanda}\" não foi encontrado, repita o procedimento com a banda que já foi cadastrada.\n");
+        
+        Thread.Sleep(4000);
+        ChamarOpcaoEscolhida("3");
     }
 }
 
 void ExibirMediaAvaliacoesDaBanda()
 {
     MostrarTodasBandas(0);
-    Console.Write("\nInforme o número da banda que deseja ver a média de avalição: ");
-    string posicao = Console.ReadLine()!;
 
-    if (int.TryParse(posicao, out _) && bandas.Count() > (int.Parse(posicao) - 1))
+    Console.Write("\nInforme o nome da banda que deseja ver a média de avalição: ");
+    string nomeBanda = Console.ReadLine()!;
+    var banda = bandas.ToList().Where(x => x.Key.ToUpper() == nomeBanda.ToUpper()).FirstOrDefault();
+
+    if (banda.Key != null)
     {
-        int posicaoTratada = int.Parse(posicao) - 1;
-        float mediaAvaliacaoBanda = avaliacao[posicaoTratada] / quantidadeAvaliacao[posicaoTratada]; 
-        Console.WriteLine($"A média de avaliação da banda {bandas[posicaoTratada]} é: {mediaAvaliacaoBanda}\n");
+        float mediaAvaliacaoBanda = banda.Value.Count() > 0 ? banda.Value.Average() : 0; 
+        Console.WriteLine($"A média de avaliação da banda {banda.Key} é: {mediaAvaliacaoBanda}\n");
+
         VoltarAoMenu();
     }
     else
     {
-        Console.WriteLine("Número da banda inválido, repita o procedimento com um número de banda válido.\n");
-        ExibirMediaAvaliacoesDaBanda();
+        Console.WriteLine($"A banda \"{nomeBanda}\" não foi encontrada, repita o procedimento com a banda que já foi cadastrada.\n");
+        
+        Thread.Sleep(4000);
+        ChamarOpcaoEscolhida("4");
     }
+}
+
+void FormatarTitulo(string titulo)
+{
+    var tracos = new string('-', titulo.Length);
+    Console.WriteLine(tracos);
+    Console.WriteLine(titulo);
+    Console.WriteLine(tracos);
 }
 
 ExibirOpcoesDoMenu();
