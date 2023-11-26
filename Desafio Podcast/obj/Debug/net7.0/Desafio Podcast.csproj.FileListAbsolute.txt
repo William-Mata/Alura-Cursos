@@ -1,0 +1,14 @@
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\bin\Debug\net7.0\Desafio Podcast.exe
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\bin\Debug\net7.0\Desafio Podcast.deps.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\bin\Debug\net7.0\Desafio Podcast.runtimeconfig.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\bin\Debug\net7.0\Desafio Podcast.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\bin\Debug\net7.0\Desafio Podcast.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\obj\Debug\net7.0\Desafio Podcast.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\obj\Debug\net7.0\Desafio Podcast.AssemblyInfoInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\obj\Debug\net7.0\Desafio Podcast.AssemblyInfo.cs
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\obj\Debug\net7.0\Desafio Podcast.csproj.CoreCompileInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\obj\Debug\net7.0\Desafio Podcast.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\obj\Debug\net7.0\refint\Desafio Podcast.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\obj\Debug\net7.0\Desafio Podcast.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\obj\Debug\net7.0\Desafio Podcast.genruntimeconfig.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Desafio Podcast\obj\Debug\net7.0\ref\Desafio Podcast.dll
