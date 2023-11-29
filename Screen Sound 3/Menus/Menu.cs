@@ -5,7 +5,7 @@ namespace Screen_Sound_3.Menus;
 public class Menu
 {
     public static List<Banda> bandas = new();
-
+   
     public void FormatarTitulo(string titulo)
     {
         var tracos = new string('#', titulo.Length);

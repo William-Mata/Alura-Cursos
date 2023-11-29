@@ -25,8 +25,7 @@ public class MenuExibirMediaAvaliacaoBanda : Menu
 
                 if (banda != null)
                 {
-                    float mediaAvaliacaoBanda = banda.Avaliacoes.Count() > 0 ? banda.Avaliacoes.Average(x => x.Nota) : 0;
-                    Console.WriteLine($"A média de avaliação da banda {banda.Nome} é: {mediaAvaliacaoBanda}\n");
+                    Console.WriteLine($"A média de avaliação da banda {banda.Nome} é: {banda.CalcularMedia()}\n");
 
                     menuOpcoes.VoltarAoMenuDeOpcoes();
                 }

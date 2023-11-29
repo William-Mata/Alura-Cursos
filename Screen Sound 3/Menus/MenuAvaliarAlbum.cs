@@ -1,7 +1,8 @@
 ﻿using Screen_Sound_3.Models;
+
 namespace Screen_Sound_3.Menus;
 
-public class MenuAvaliarBanda : Menu
+public class MenuAvaliarAlbum : Menu
 {
     #region Atributos/Propriedades
     private MenuOpcoes menuOpcoes = new();
@@ -18,7 +19,7 @@ public class MenuAvaliarBanda : Menu
 
             do
             {
-                FormatarTitulo("# Avaliar Banda #");
+                FormatarTitulo("# Avaliar Álbum #");
                 Banda.ListarBandas(bandas);
 
                 Console.Write("\nInforme o nome da banda que deseja realizar a avalição: ");
@@ -27,10 +28,24 @@ public class MenuAvaliarBanda : Menu
 
                 if (banda != null)
                 {
-                    Console.Write($"Digite a sua avaliação a banda {banda.Nome}: ");
-                    var avaliacaoBanda = Console.ReadLine()!;
-                    banda.AdicionarNota(avaliacaoBanda);
-                    Console.WriteLine($"\nA nota {avaliacaoBanda} foi atribuida a banda {nomeBanda}");
+                    Console.WriteLine();
+                    Album.ListarTodosAlbuns(banda.Albuns.ToList());
+                    Console.Write("\nInforme o nome do Álbum que deseja realizar a avalição: ");
+                    string nomeAlbum = Console.ReadLine()!;
+                    Album album = banda.Albuns.ToList().FirstOrDefault(x => x.Nome.ToUpper() == nomeAlbum.ToUpper());
+
+                    if (album != null)
+                    {
+                        Console.Write($"Digite a sua avaliação do Álbum {nomeAlbum}: ");
+                        var avaliacaoAlbum = Console.ReadLine()!;
+                        album.AdicionarNota(avaliacaoAlbum);
+                        Console.WriteLine($"\nA nota {avaliacaoAlbum} foi atribuida ao Album {nomeAlbum}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"O álbum \"{nomeAlbum}\" não foi encontrado.\n");
+                    }
+
                     menuOpcoes.VoltarAoMenuDeOpcoes();
                 }
                 else

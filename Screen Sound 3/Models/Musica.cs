@@ -12,14 +12,14 @@ public class Musica
     public string Descricao => $"A música {Nome} do gênero {Genero.Nome} foi lançada no ano de {AnoDeLancamento} pela banda {Banda.Nome} e tem duração de {Duracao}";
     public Genero Genero { get; set; }
     public Banda Banda { get; }
-    #endregion
 
+    #endregion
+   
     #region Métodos/Construtores
     public Musica(string nome, Banda banda) {
         this.Nome = nome;
         this.Banda = banda;
     }
-
     public void ExibirFichaTecnica()
     {
         Console.WriteLine(new string('*', 25));
@@ -32,6 +32,11 @@ public class Musica
         Console.WriteLine($"Gênero: {Genero.Nome}");
         Console.WriteLine($"Descrição: {Descricao}");
         Console.WriteLine($"Disponivel: {(Disponivel ? "Sim" : "Não")}\n");
+    }
+    public static void ListarTodasMusicas(List<Musica> musicas)
+    {
+        int contador = 1;
+        musicas.ForEach(x => Console.WriteLine($"{contador++} - {x.Nome}"));
     }
     #endregion
 }

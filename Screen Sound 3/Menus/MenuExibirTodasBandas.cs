@@ -4,8 +4,11 @@ namespace Screen_Sound_3.Menus;
 
 public class MenuExibirTodasBandas : Menu 
 {
+    #region Atributos/Propriedades
     private MenuOpcoes menuOpcoes = new();
+    #endregion
 
+    #region Métodos/Construtores
     public override void Executar()
     {
         base.Executar();
@@ -18,4 +21,5 @@ public class MenuExibirTodasBandas : Menu
             menuOpcoes.VoltarAoMenuDeOpcoes();
         }
     }
+    #endregion
 }

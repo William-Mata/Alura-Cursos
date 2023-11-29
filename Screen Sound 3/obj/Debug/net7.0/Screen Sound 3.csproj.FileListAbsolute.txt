@@ -12,3 +12,17 @@ C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\obj\Debug\
 C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\obj\Debug\net7.0\Screen Sound 3.pdb
 C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\obj\Debug\net7.0\Screen Sound 3.genruntimeconfig.cache
 C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\obj\Debug\net7.0\ref\Screen Sound 3.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\obj\Debug\net7.0\Screen Sound 3.csproj.AssemblyReference.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Microsoft.Extensions.Http.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\bin\Debug\net7.0\OpenAI_API.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 3\obj\Debug\net7.0\Screen Sound 3.csproj.CopyComplete

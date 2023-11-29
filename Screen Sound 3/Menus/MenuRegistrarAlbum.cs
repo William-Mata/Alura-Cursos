@@ -1,12 +1,12 @@
-﻿using Screen_Sound_3.Models;
+﻿using Screen_Sound_3.Client;
+using Screen_Sound_3.Models;
 
 namespace Screen_Sound_3.Menus;
 
-public class RegistrarAlbum : Menu
+public class MenuRegistrarAlbum : Menu
 {
     private MenuOpcoes menuOpcoes = new();
-    private MenuExibirDetalhes menuExibirDetalhes = new();
-    private RegistroDeMusica registroDeMusica = new();
+    private MenuRegistrarMusica menuRegistrarMusica = new();
 
     public override void Executar()
     {
@@ -32,9 +32,10 @@ public class RegistrarAlbum : Menu
 
                     if (!string.IsNullOrEmpty(nomeDoAlbum))
                     {
-                        List<Musica> musicas = registroDeMusica.RegistrarMusica(banda);
-                        Album album = new Album(nomeDoAlbum, musicas);
-                        banda.Albuns.Add(album);
+                        string descricao = ChatGPT.PerguntarChatGPTAsync($"Resuma o álbum {nomeDoAlbum} da banda {nomeBanda} em 1 parágrafo. Adote um estilo informal.").Result;
+                        List<Musica> musicas = menuRegistrarMusica.Registrar(banda);
+                        Album album = new Album(nomeDoAlbum, musicas, descricao);
+                        banda.CadastrarAlbum(album);
                         Console.WriteLine($"\nO {Album.QuantidadeDeAlbunsCriados}° - Álbum {album.Nome} foi atribuida a banda {nomeBanda}");
                     }
                     menuOpcoes.VoltarAoMenuDeOpcoes();

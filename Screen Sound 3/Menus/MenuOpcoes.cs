@@ -1,7 +1,19 @@
-﻿namespace Screen_Sound_3.Menus;
+﻿using OpenAI_API.Chat;
+
+namespace Screen_Sound_3.Menus;
 
 public class MenuOpcoes : Menu
 {
+    #region Atributos/Propriedades
+    private static Dictionary<int, Menu> opcoes = new();
+    #endregion
+
+    #region Métodos/Construtores
+    public MenuOpcoes(Dictionary<int, Menu> opcoesMenu) 
+    { 
+        opcoes = opcoesMenu;
+    }
+
     private static void ExibirMensagemDeBoasVindas()
     {
         Console.WriteLine(@"
@@ -15,17 +27,7 @@ public class MenuOpcoes : Menu
         Console.WriteLine(mensagemDeBoasVindas);
     }
 
-    private static Dictionary<int, Menu> opcoes = new();
-
-    public MenuOpcoes(Dictionary<int, Menu> opcoesMenu) 
-    { 
-        opcoes = opcoesMenu;
-    }
-
-    public MenuOpcoes()
-    {
-
-    }
+    public MenuOpcoes(){}
 
     public void ExibirOpcoesDoMenu()
     {
@@ -34,11 +36,12 @@ public class MenuOpcoes : Menu
 
         Console.WriteLine("\nDigite 0 para sair");
         Console.WriteLine("Digite 1 para registrar uma banda");
-        Console.WriteLine("Digite 2 para exibir todas as bandas");
+        Console.WriteLine("Digite 2 para registrar um álbum");
         Console.WriteLine("Digite 3 para avaliar uma banda");
-        Console.WriteLine("Digite 4 para exibir a média de uma banda");
-        Console.WriteLine("Digite 5 para registrar um álbum");
-        Console.WriteLine("Digite 6 para ver informações de uma banda");
+        Console.WriteLine("Digite 4 para avaliar um álbum");
+        Console.WriteLine("Digite 5 para exibir todas as bandas");
+        Console.WriteLine("Digite 6 para exibir a média de uma banda");
+        Console.WriteLine("Digite 7 para ver informações de uma banda");
         Console.Write("\nDigite a sua opção: ");
         string opcaoEscolhida = Console.ReadLine()!;
 
@@ -74,4 +77,5 @@ public class MenuOpcoes : Menu
             return false; 
         }
     }
+    #endregion
 }

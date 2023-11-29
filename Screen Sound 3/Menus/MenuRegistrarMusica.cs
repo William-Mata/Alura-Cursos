@@ -2,9 +2,10 @@
 
 namespace Screen_Sound_3.Menus;
 
-public class RegistroDeMusica : Menu
+public class MenuRegistrarMusica : Menu
 {
-    public List<Musica> RegistrarMusica(Banda banda)
+    #region Métodos/Construtores
+    public List<Musica> Registrar(Banda banda)
     {
         List<Musica> musicas = new List<Musica>();
         var opcao = "1";
@@ -36,13 +37,14 @@ public class RegistroDeMusica : Menu
                 Console.WriteLine($"A música {musica.Nome} foi cadastrada com sucesso!");
             }
 
-            Console.WriteLine($"\nDigite 1 para cadastrar outra música: ");
-            Console.WriteLine($"Digite 0 para sair: ");
+            Console.WriteLine($"\nDigite 1 para cadastrar outra música");
+            Console.WriteLine($"Pressione outra tecla para voltar");
             Console.Write($"Digite a opção: ");
             opcao = Console.ReadLine()!;
 
-        } while (opcao != "0");
+        } while (opcao == "1");
 
         return musicas;
     }
+    #endregion
 }
