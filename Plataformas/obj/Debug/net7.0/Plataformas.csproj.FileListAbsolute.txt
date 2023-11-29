@@ -1,0 +1,14 @@
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\bin\Debug\net7.0\Plataformas.exe
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\bin\Debug\net7.0\Plataformas.deps.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\bin\Debug\net7.0\Plataformas.runtimeconfig.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\bin\Debug\net7.0\Plataformas.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\bin\Debug\net7.0\Plataformas.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\obj\Debug\net7.0\Plataformas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\obj\Debug\net7.0\Plataformas.AssemblyInfoInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\obj\Debug\net7.0\Plataformas.AssemblyInfo.cs
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\obj\Debug\net7.0\Plataformas.csproj.CoreCompileInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\obj\Debug\net7.0\Plataformas.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\obj\Debug\net7.0\refint\Plataformas.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\obj\Debug\net7.0\Plataformas.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\obj\Debug\net7.0\Plataformas.genruntimeconfig.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Plataformas\obj\Debug\net7.0\ref\Plataformas.dll

@@ -1,10 +1,9 @@
 ﻿// SCREEN SOUND
-
 #region Variáveis 
 Dictionary<string, List<float>> bandas = new Dictionary<string, List<float>>();
 #endregion
 
-#region Funções
+#region Métodos
 void ExibirMensagemDeBoasVindas()
 {
     Console.WriteLine(@"
