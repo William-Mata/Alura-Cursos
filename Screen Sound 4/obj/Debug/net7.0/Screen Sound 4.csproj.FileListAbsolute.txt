@@ -1,0 +1,14 @@
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\bin\Debug\net7.0\Screen Sound 4.exe
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\bin\Debug\net7.0\Screen Sound 4.deps.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\bin\Debug\net7.0\Screen Sound 4.runtimeconfig.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\bin\Debug\net7.0\Screen Sound 4.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\bin\Debug\net7.0\Screen Sound 4.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\obj\Debug\net7.0\Screen Sound 4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\obj\Debug\net7.0\Screen Sound 4.AssemblyInfoInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\obj\Debug\net7.0\Screen Sound 4.AssemblyInfo.cs
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\obj\Debug\net7.0\Screen Sound 4.csproj.CoreCompileInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\obj\Debug\net7.0\Screen Sound 4.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\obj\Debug\net7.0\refint\Screen Sound 4.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\obj\Debug\net7.0\Screen Sound 4.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\obj\Debug\net7.0\Screen Sound 4.genruntimeconfig.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Screen Sound 4\obj\Debug\net7.0\ref\Screen Sound 4.dll
