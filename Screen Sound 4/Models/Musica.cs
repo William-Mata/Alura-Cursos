@@ -4,6 +4,11 @@ namespace Screen_Sound_4.Modelos
 {
     public class Musica
     {
+        private string[] Tonalidades = { "C", "C#", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B" };
+
+        [JsonPropertyName("key")]
+        public int Id {get ; set; }
+
         [JsonPropertyName("song")]
         public string? Nome { get; set; }
 
@@ -19,6 +24,13 @@ namespace Screen_Sound_4.Modelos
         [JsonPropertyName("genre")]
         public string? Genero { get; set; }
 
+        public string? Tonalidade => Tonalidades[Id];
+
+        public Musica(string nome, string artista)
+        {
+            Nome = nome;
+            Artista = artista;
+        }
 
         public void ExibirDetalhesDaMusica()
         {
@@ -29,8 +41,8 @@ namespace Screen_Sound_4.Modelos
             Console.WriteLine($"Duração: {time.ToString()}");
             Console.WriteLine($"Ano De Lançamento: {AnoDeLancamento}");
             Console.WriteLine($"Gênero: {Genero}");
+            Console.WriteLine($"Tonalidade: {Tonalidade}");
             Console.WriteLine("\n");
         }
-
     }
 }

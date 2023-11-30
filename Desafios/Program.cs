@@ -9,8 +9,8 @@ using (HttpClient client = new HttpClient())
 
         //Desafio 1
         //Console.WriteLine("Desafio 1");
-        //string animes = await client.GetStringAsync("https://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=4658&manga=4199&manga=11608");
-        //Console.WriteLine(animes);
+        //string personagens = await client.GetStringAsync("https://www.anapioficeandfire.com/api/characters");
+        //Console.WriteLine(personagens);
         //ExecutarProximoDesafio();
 
         //// Desafio 2
@@ -55,12 +55,4 @@ using (HttpClient client = new HttpClient())
     {
         Console.WriteLine($"Temos um problema: {ex.Message}");
     }
-}
-
-
-void ExecutarProximoDesafio()
-{
-    Console.WriteLine("\nPressione uma tecla para ver o resultado do próximo desafio");
-    Console.ReadKey();
-    Console.Clear();
 }
