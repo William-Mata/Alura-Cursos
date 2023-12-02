@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "opEsS1DbP5FuzieHjH76nDVdkvAO/y7I2gZmvuGMYAn7FtJRGhCTU59cAUQBBMSGWEL5yaXQ2BMD5uCPloyySw==",
+  "dgSpecHash": "4doQNExnuM67ZjyA3y9/aLrCFVfO2PY+TT9z7oF/y/UdQ/3AoOdxoeDtu2nb2W9aL2bWjZxpq21L4KhB01XOHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Screen Sound 3\\Screen Sound 3.csproj",
+  "projectFilePath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Formação Aprenda a programar em C# com Orientação a Objetos\\Screen Sound 3\\Screen Sound 3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.configuration\\2.1.0\\microsoft.extensions.configuration.2.1.0.nupkg.sha512",

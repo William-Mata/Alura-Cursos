@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Screen Sound 4\\Screen Sound 4.csproj",
+      "projectUniqueName": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Formação Aprenda a programar em C# com Orientação a Objetos\\Screen Sound 4\\Screen Sound 4.csproj",
       "projectName": "Screen Sound 4",
-      "projectPath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Screen Sound 4\\Screen Sound 4.csproj",
+      "projectPath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Formação Aprenda a programar em C# com Orientação a Objetos\\Screen Sound 4\\Screen Sound 4.csproj",
       "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Screen Sound 4\\obj\\",
+      "outputPath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Formação Aprenda a programar em C# com Orientação a Objetos\\Screen Sound 4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",

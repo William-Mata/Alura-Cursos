@@ -1,6 +1,6 @@
 ﻿namespace bytebank.Modelos.Conta
 {
-	public class ContaCorrente
+	public class ContaCorrente : IComparable<ContaCorrente>
 	{
 		private int _numero_agencia;
 
@@ -27,7 +27,7 @@
 			}
 		}
 
-		public string Conta
+		public string? Conta
 		{
 			get
 			{
@@ -96,23 +96,46 @@
 			return true;
 		}
 
-		public ContaCorrente(int numero_agencia)
+		public ContaCorrente(int numero_agencia, string conta, double saldo)
 		{
 			Numero_agencia = numero_agencia;
-			Conta = Guid.NewGuid().ToString().Substring(0, 8);
+			Saldo = saldo;
+			Conta = conta; 
 			Titular = new Cliente();
 			TotalDeContasCriadas++;
 		}
 
-		public override string ToString()
-		{
+        public ContaCorrente(int numero_agencia, double saldo)
+        {
+            Numero_agencia = numero_agencia;
+            Saldo = saldo;
+            Conta = Guid.NewGuid().ToString().Substring(0, 8);
+            Titular = new Cliente();
+            TotalDeContasCriadas++;
+        }
 
+        public override string ToString()
+		{
 			return $" === DADOS DA CONTA === \n" +
+				   $"Número da Agência : {this.Numero_agencia} \n" +
 				   $"Número da Conta : {this.Conta} \n" +
-				   $"Titular da Conta: {this.Titular.Nome} \n" +
-				   $"CPF do Titular  : {this.Titular.Cpf} \n" +
-				   $"Profissão do Titular: { this.Titular.Profissao}";
+                   $"Titular da Conta: {this.Titular.Nome} \n" +
+                   $"Saldo da Conta: {this.Saldo} \n" +
+                   $"CPF do Titular  : {this.Titular.Cpf} \n" +
+				   $"Profissão do Titular: { this.Titular.Profissao}\n";
 		}
-	}
+
+        public int CompareTo(ContaCorrente? conta)
+        {
+            if(conta != null)
+			{
+				return conta.Numero_agencia.CompareTo(this.Numero_agencia);
+			}
+		    else 
+			{ 
+				return 0;
+			}
+        }
+    }
 
 }
