@@ -1,0 +1,14 @@
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\bin\Debug\net6.0\ByteBankIO.exe
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\bin\Debug\net6.0\ByteBankIO.deps.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\bin\Debug\net6.0\ByteBankIO.runtimeconfig.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\bin\Debug\net6.0\ByteBankIO.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\bin\Debug\net6.0\ByteBankIO.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\obj\Debug\net6.0\ByteBankIO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\obj\Debug\net6.0\ByteBankIO.AssemblyInfoInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\obj\Debug\net6.0\ByteBankIO.AssemblyInfo.cs
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\obj\Debug\net6.0\ByteBankIO.csproj.CoreCompileInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\obj\Debug\net6.0\ByteBankIO.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\obj\Debug\net6.0\refint\ByteBankIO.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\obj\Debug\net6.0\ByteBankIO.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\obj\Debug\net6.0\ByteBankIO.genruntimeconfig.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\ByteBankIO\ByteBankIO\obj\Debug\net6.0\ref\ByteBankIO.dll
