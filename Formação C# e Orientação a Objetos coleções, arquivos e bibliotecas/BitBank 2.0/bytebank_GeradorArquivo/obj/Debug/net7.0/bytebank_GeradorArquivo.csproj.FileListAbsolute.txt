@@ -1,0 +1,11 @@
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\obj\Debug\net7.0\bytebank_GeradorArquivo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\obj\Debug\net7.0\bytebank_GeradorArquivo.AssemblyInfoInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\obj\Debug\net7.0\bytebank_GeradorArquivo.AssemblyInfo.cs
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\obj\Debug\net7.0\bytebank_GeradorArquivo.csproj.CoreCompileInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\bin\Debug\net7.0\bytebank_GeradorArquivo.deps.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\bin\Debug\net7.0\bytebank_GeradorArquivo.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\bin\Debug\net7.0\bytebank_GeradorArquivo.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\obj\Debug\net7.0\bytebank_GeradorArquivo.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\obj\Debug\net7.0\refint\bytebank_GeradorArquivo.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\obj\Debug\net7.0\bytebank_GeradorArquivo.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_GeradorArquivo\obj\Debug\net7.0\ref\bytebank_GeradorArquivo.dll

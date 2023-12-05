@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPublishable>True</IsPublishable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Xml.XmlSerializer" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\bytebank_Biblioteca\bytebank_Biblioteca.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="bytebank_GeradorArquivo">
+      <HintPath>..\bytebank_GeradorArquivo\bin\Debug\net7.0\bytebank_GeradorArquivo.dll</HintPath>
+    </Reference>
+    <Reference Include="bytebank_GeradorChavePix">
+      <HintPath>..\bytebank_GeradorChavePix\bin\Debug\net7.0\bytebank_GeradorChavePix.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+
+
+
+  
+</Project>

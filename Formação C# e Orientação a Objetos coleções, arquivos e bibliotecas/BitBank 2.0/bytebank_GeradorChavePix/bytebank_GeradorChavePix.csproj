@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>Esse pacote se destina gear chaves PIX de forma aleatória, usando os recursos da estrutura Guid.</Description>
+    <PackageId>bytebank_GeradorChavePixWilliamMata</PackageId>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfContaCorrente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ContaCorrente>
+    <Titular>
+      <Cpf>11111</Cpf>
+      <Nome>Henrique</Nome>
+    </Titular>
+    <Numero_agencia>95</Numero_agencia>
+    <Conta>123456-X</Conta>
+    <Saldo>100</Saldo>
+  </ContaCorrente>
+  <ContaCorrente>
+    <Titular>
+      <Cpf>22222</Cpf>
+      <Nome>Pedro</Nome>
+    </Titular>
+    <Numero_agencia>95</Numero_agencia>
+    <Conta>951258-X</Conta>
+    <Saldo>200</Saldo>
+  </ContaCorrente>
+  <ContaCorrente>
+    <Titular>
+      <Cpf>33333</Cpf>
+      <Nome>Marisa</Nome>
+    </Titular>
+    <Numero_agencia>94</Numero_agencia>
+    <Conta>987321-W</Conta>
+    <Saldo>60</Saldo>
+  </ContaCorrente>
+</ArrayOfContaCorrente>

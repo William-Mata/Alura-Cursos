@@ -1,0 +1,11 @@
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\bin\Debug\net7.0\bytebank_Biblioteca.deps.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\bin\Debug\net7.0\bytebank_Biblioteca.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\bin\Debug\net7.0\bytebank_Biblioteca.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\obj\Debug\net7.0\bytebank_Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\obj\Debug\net7.0\bytebank_Biblioteca.AssemblyInfoInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\obj\Debug\net7.0\bytebank_Biblioteca.AssemblyInfo.cs
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\obj\Debug\net7.0\bytebank_Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\obj\Debug\net7.0\bytebank_Biblioteca.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\obj\Debug\net7.0\refint\bytebank_Biblioteca.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\obj\Debug\net7.0\bytebank_Biblioteca.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\BitBank 2.0\bytebank_Biblioteca\obj\Debug\net7.0\ref\bytebank_Biblioteca.dll
