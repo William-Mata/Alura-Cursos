@@ -11,7 +11,7 @@ namespace ByteBankIO.Models
         public int Numero { get; }
         public int Agencia { get; }
         public double Saldo { get; private set; }
-        public Cliente Titular { get; set; }
+        public Cliente Titular { get; set; } = new Cliente();
 
         public ContaCorrente(int agencia, int numero)
         {
@@ -43,5 +43,15 @@ namespace ByteBankIO.Models
 
             Saldo += valor;
         }
+
+        public override string ToString()
+        {
+            return $"\nInformações Da Conta\n" +
+                $"Conta: {Numero}\n" +
+                $"Agência: {Agencia}\n" +
+                $"Saldo: {Saldo.ToString("C")}\n" +
+                $"Titular: {Titular.Nome}\n";
+        }
+
     }
 }
