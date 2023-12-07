@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bytebank_ATENDIMENTO", "byt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bytebank_Biblioteca", "bytebank_Biblioteca\bytebank_Biblioteca.csproj", "{E8A40DA7-EC32-4941-BE9E-9475BF69DB56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bytebank_GeradorChavePix", "bytebank_GeradorChavePix\bytebank_GeradorChavePix.csproj", "{6AE29746-B2DA-4EEA-81BE-66EB15EB1DD1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{E8A40DA7-EC32-4941-BE9E-9475BF69DB56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8A40DA7-EC32-4941-BE9E-9475BF69DB56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8A40DA7-EC32-4941-BE9E-9475BF69DB56}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6AE29746-B2DA-4EEA-81BE-66EB15EB1DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AE29746-B2DA-4EEA-81BE-66EB15EB1DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AE29746-B2DA-4EEA-81BE-66EB15EB1DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AE29746-B2DA-4EEA-81BE-66EB15EB1DD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

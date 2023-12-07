@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="bytebank_GeradorChavePixWilliamMata" Version="1.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Xml.XmlSerializer" Version="4.3.0" />
   </ItemGroup>
@@ -20,9 +21,6 @@
   <ItemGroup>
     <Reference Include="bytebank_GeradorArquivo">
       <HintPath>..\bytebank_GeradorArquivo\bin\Debug\net7.0\bytebank_GeradorArquivo.dll</HintPath>
-    </Reference>
-    <Reference Include="bytebank_GeradorChavePix">
-      <HintPath>..\bytebank_GeradorChavePix\bin\Debug\net7.0\bytebank_GeradorChavePix.dll</HintPath>
     </Reference>
   </ItemGroup>
 
