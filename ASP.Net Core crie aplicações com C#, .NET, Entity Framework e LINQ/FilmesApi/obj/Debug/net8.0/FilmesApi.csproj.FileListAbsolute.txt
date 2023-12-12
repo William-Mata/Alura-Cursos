@@ -145,3 +145,5 @@ C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplica�
 C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\FilmesApi\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\FilmesApi\bin\Debug\net8.0\FilmesApi.xml
 C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\FilmesApi\obj\Debug\net8.0\FilmesApi.xml
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\FilmesApi\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\FilmesApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll

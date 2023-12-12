@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("FilmeConnection"); // PEGANDO A CONNECTION STRING
-builder.Services.AddDbContext<FilmeContext>(opts => opts.UseSqlServer(connectionString)); // CONFIGURANDO A CONEXÃO COM O BANCO DE DADOS
+builder.Services.AddDbContext<FilmeContext>(opts => opts.UseLazyLoadingProxies().UseSqlServer(connectionString)); // CONFIGURANDO A CONEXÃO COM O BANCO DE DADOS
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); // ADICIONANDO O AUTOMAPPER
 

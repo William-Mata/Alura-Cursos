@@ -4,9 +4,9 @@ using FilmesApi.Models;
 
 namespace FilmesApi.Mapper;
 
-public class Mapper : Profile
+public class FilmeProfile : Profile
 {
-    public Mapper()
+    public FilmeProfile()
     {
         #region DTOS TO MODELS
         CreateMap<CreateFilmeDto, Filme>();
@@ -14,8 +14,7 @@ public class Mapper : Profile
         #endregion
 
         #region MODELS TO DTOS
-        CreateMap<Filme, UpdateFilmeDto>();
-        CreateMap<Filme, ReadFilmeDto>();
+        CreateMap<Filme, ReadFilmeDto>().ForMember(filmeDto => filmeDto.Sessoes, opt => opt.MapFrom(filme => filme.Sessoes));
         #endregion
     }
 }

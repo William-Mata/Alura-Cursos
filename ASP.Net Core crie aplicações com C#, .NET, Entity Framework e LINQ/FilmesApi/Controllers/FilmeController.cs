@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Azure;
 using FilmesApi.DataBase;
 using FilmesApi.Dtos;
 using FilmesApi.Models;
@@ -34,15 +33,23 @@ public class FilmeController : Controller
         var filme = _mapper.Map<Filme>(createFilme);
         _context.Filmes.Add(filme);
         _context.SaveChanges();
-        Console.WriteLine(filme);
 
         return CreatedAtAction(nameof(RecuperarFilmePorId), new { id = filme.Id});
     }
 
     [HttpGet("ListarFilmes")] 
-    public IActionResult ListarFilmes([FromQuery] int skip, [FromQuery] int take = 50) //FROMQUERY  DEFINE QUE O CONTEUDO DA REQUISIÇÃO DEVERA VIR NA URL 
+    public IActionResult ListarFilmes([FromQuery] int skip, [FromQuery] int take = 50, [FromQuery] string? nomeCinema = null) //FROMQUERY  DEFINE QUE O CONTEUDO DA REQUISIÇÃO DEVERA VIR NA URL 
     {
-        var filmes =  _context.Filmes.Skip(skip).Take(take);
+        List<Filme> filmes;
+
+        if (nomeCinema == null)
+        {
+            filmes =  _context.Filmes.Skip(skip).Take(take).ToList();
+        }
+        else
+        {
+           filmes = _context.Filmes.Where(f => f.Sessoes.Any(s => s.Cinema.Nome.Equals(nomeCinema))).Skip(skip).Take(take).ToList();
+        }
 
         var filmeDto = _mapper.Map<List<ReadFilmeDto>>(filmes);
         return Ok(filmeDto);
