@@ -1,0 +1,15 @@
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\bin\Debug\net8.0\SevenDaysOfCode.exe
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\bin\Debug\net8.0\SevenDaysOfCode.deps.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\bin\Debug\net8.0\SevenDaysOfCode.runtimeconfig.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\bin\Debug\net8.0\SevenDaysOfCode.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\bin\Debug\net8.0\SevenDaysOfCode.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\obj\Debug\net8.0\SevenDaysOfCode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\obj\Debug\net8.0\SevenDaysOfCode.AssemblyInfoInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\obj\Debug\net8.0\SevenDaysOfCode.AssemblyInfo.cs
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\obj\Debug\net8.0\SevenDaysOfCode.csproj.CoreCompileInputs.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\obj\Debug\net8.0\SevenDaysOfCode.sourcelink.json
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\obj\Debug\net8.0\SevenDaysOfCode.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\obj\Debug\net8.0\refint\SevenDaysOfCode.dll
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\obj\Debug\net8.0\SevenDaysOfCode.pdb
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\obj\Debug\net8.0\SevenDaysOfCode.genruntimeconfig.cache
+C:\Users\willi\OneDrive\Documentos\GitHub\Alura-Cursos\ASP.Net Core crie aplicações com C#, .NET, Entity Framework e LINQ\SevenDaysOfCode\obj\Debug\net8.0\ref\SevenDaysOfCode.dll
