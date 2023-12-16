@@ -1,7 +1,8 @@
 ﻿using SevenDaysOfCode.Client;
-using SevenDaysOfCode.Util;
+using SevenDaysOfCode.Controller;
+using SevenDaysOfCode.Views;
 
 //var Mascote = await PokeApi.ConsultarApiAsync(1);
 //Console.WriteLine(Mascote);
 
-await Menu.ExibirMenu();
+await MenuView.MenuPrimeiroAcesso();

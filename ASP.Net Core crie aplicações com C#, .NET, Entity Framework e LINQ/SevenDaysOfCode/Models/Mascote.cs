@@ -1,6 +1,4 @@
-﻿using SevenDaysOfCode.Client;
-using SevenDaysOfCode.Util;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace SevenDaysOfCode.Models;
 
@@ -24,24 +22,47 @@ public class Mascote
     [JsonPropertyName("abilities")]
     public List<Habilidades> Habilidades { get; set; } = new List<Habilidades>();
 
-    public static async Task ListarMascotes()
+    private int Alimentacao { get; set; }
+
+    private int Humor { get; set; }
+
+    private int Cansaco { get; set; }
+
+    public Mascote()
     {
-        var result = await PokeApi.ListarMascoteApiAsync();
-        Console.Clear();
-        Console.WriteLine($"{new string('#', 30)}");
-        Console.WriteLine($"{new string(' ', 7)} ADOTAR UM MASCOTE {new string(' ', 7)}");
-        Console.WriteLine($"{new string('#', 30)}");
-        result.Mascotes.ForEach(m => Console.WriteLine($"{m.Nome}"));
-        await Menu.ExibirSubMenuAdocao();
+        var random =  new Random();
+        Alimentacao = int.Parse(random.NextInt64(0, 11).ToString());
+        Humor = int.Parse(random.NextInt64(0, 11).ToString());
+        Cansaco = int.Parse(random.NextInt64(0, 11).ToString());
     }
 
-    public static void ListarMascotesAdotador()
+    public void Alimentar()
     {
-        Console.Clear();   
-        Console.WriteLine($"{new string('#', 30)}");
-        Console.WriteLine($"{new string(' ', 8)} SEUS MASCOTES {new string(' ', 8)}");
-        Console.WriteLine($"{new string('#', 30)}");
-        Menu.Mascotes.ForEach(m => Console.WriteLine($"{m}\n"));
+        if(Alimentacao < 10) 
+        {
+            Alimentacao++;
+            Humor--;
+        }
+    }
+
+    public void Brincar()
+    {
+        if(Humor < 10) 
+        { 
+            Humor++;
+            Alimentacao--;
+            Cansaco--;
+        }
+    }
+
+    public void Descansar()
+    {
+        if (Cansaco < 10)
+        {
+            Cansaco++;
+            Humor++;
+            Alimentacao--;
+        }
     }
 
     public override string ToString()
@@ -49,6 +70,9 @@ public class Mascote
         return $"Nome Pokemon: {Nome}\n" +
                $"Altura: {Altura}\n" +
                $"Peso: {Peso}\n" +
+               $"Alimentação: {Alimentacao}\n" +
+               $"Humor: {Humor}\n" +
+               $"Cansaço: {Cansaco}\n" +
                $"Habilidades: {string.Join("", Habilidades)}";
     }
 }
