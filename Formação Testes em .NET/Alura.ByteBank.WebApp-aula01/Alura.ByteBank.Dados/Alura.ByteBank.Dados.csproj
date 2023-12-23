@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20211022000603_Inicial.cs" />
+    <Compile Remove="Migrations\20211022000603_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20211022141323_Atualizacao.cs" />
+    <Compile Remove="Migrations\20211022141323_Atualizacao.Designer.cs" />
+    <Compile Remove="Migrations\20211022183541_Atualizacao2.cs" />
+    <Compile Remove="Migrations\20211022183541_Atualizacao2.Designer.cs" />
+    <Compile Remove="Migrations\20211027185826_Atualizacao3.cs" />
+    <Compile Remove="Migrations\20211027185826_Atualizacao3.Designer.cs" />
+    <Compile Remove="Migrations\20211029183650_PopularBancoByteBank.cs" />
+    <Compile Remove="Migrations\20211029183650_PopularBancoByteBank.Designer.cs" />
+    <Compile Remove="Migrations\20211208135406_UsuarioApp.cs" />
+    <Compile Remove="Migrations\20211208135406_UsuarioApp.Designer.cs" />
+    <Compile Remove="Migrations\20211208135817_InsertUsuario.cs" />
+    <Compile Remove="Migrations\20211208135817_InsertUsuario.Designer.cs" />
+    <Compile Remove="Migrations\ByteBankContextoModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Migrations\sql.SQL" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alura.ByteBank.Domain\Alura.ByteBank.Dominio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>

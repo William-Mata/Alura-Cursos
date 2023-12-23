@@ -1,0 +1,119 @@
+{
+  "id": "b004810c-4608-40b5-81a3-333dfc83a718",
+  "version": "2.0",
+  "name": "Logando no Sistema",
+  "url": "https://localhost:44309",
+  "tests": [{
+    "id": "2e994288-5446-4e8f-afd4-805e57897e91",
+    "name": "LogandoNoSistema",
+    "commands": [{
+      "id": "834d60c5-b67a-4855-bfcd-198b201b2694",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d248a35-982c-4e01-8ac7-4392fede4164",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1348x818",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e926443b-9277-44e9-926e-5ab9d9cd554f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.flex-grow-2 .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/UsuarioApps/Login')]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6571991b-8ec4-49f5-9643-f61b0826e785",
+      "comment": "",
+      "command": "click",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88ce4115-c824-42ec-a06b-2669dd82b622",
+      "comment": "",
+      "command": "type",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "william@email.com"
+    }, {
+      "id": "1b1d2002-0974-4586-bfa4-de6bdd8f58ec",
+      "comment": "",
+      "command": "type",
+      "target": "id=Senha",
+      "targets": [
+        ["id=Senha", "id"],
+        ["name=Senha", "name"],
+        ["css=#Senha", "css:finder"],
+        ["xpath=//input[@id='Senha']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "senha01"
+    }, {
+      "id": "9b550e0d-692d-4268-83ab-d14ad44c9ac4",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=Senha",
+      "targets": [
+        ["id=Senha", "id"],
+        ["name=Senha", "name"],
+        ["css=#Senha", "css:finder"],
+        ["xpath=//input[@id='Senha']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "94db0749-10cd-41f4-9d23-976beb342560",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Logout | andre@email.com']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b36121b7-c9c5-41d8-904d-c32617f59a06",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e295c7ff-7b3a-455b-8293-235575d4bc1c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2e994288-5446-4e8f-afd4-805e57897e91"]
+  }],
+  "urls": ["https://localhost:44309/"],
+  "plugins": []
+}
