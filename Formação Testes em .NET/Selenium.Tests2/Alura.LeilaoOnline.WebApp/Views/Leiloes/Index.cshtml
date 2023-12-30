@@ -1,0 +1,99 @@
+﻿@model Pagina<LeilaoViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<div class="fixed-action-btn">
+    <a asp-controller="Leiloes" asp-action="Novo" class="btn-floating btn-large waves-effect waves-light">
+        <i class="material-icons">add</i>
+    </a>
+</div>*@
+
+<!-- Modal Structure -->
+<div id="modalConfirmaDelLeilao" class="modal">
+    <div class="modal-content">
+        <h4>Confirmação</h4>
+        <p>Tem certeza que deseja excluir o leilão?</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="modal-close btn-flat">Não</a>
+        <form asp-action="Remove" asp-controller="Leiloes">
+            <input type="hidden" name="id" value="2" class="inline" />
+            <button class="modal-close waves-effect waves-green btn-flat">Sim</button>
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <!-- Tabela com os leilões cadastrados -->
+            <div class="card">
+                <div class="card-content">
+                    <h4 class="card-title">
+                        Leilões cadastrados no sistema
+                        <a asp-action="Novo" asp-controller="Leiloes" class="right red btn-small btn-floating waves-effect waves-light">
+                            <i class="material-icons">add</i>
+                        </a>
+
+                    </h4>
+                    <table class="striped responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Descrição</th>
+                                <th>Valor Inicial</th>
+                                <th>Categoria</th>
+                                <th>Estado Atual</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var leilao in Model.Items)
+                            {
+                                <tr>
+                                    <td>@leilao.Titulo</td>
+                                    <td>@leilao.ValorInicial</td>
+                                    <td>@leilao.Categoria</td>
+                                    <td>@leilao.Estado.ParaTexto()</td>
+                                    <td>
+                                        <a class="modal-trigger black-text" href="#modalConfirmaDelLeilao"><i class="material-icons">close</i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!--card.content>table-->
+                <div class="card-action">
+                    <ul class="pagination right-align">
+                        @{
+                            var anteriorDisabled = (Model.Info.Anterior <= 0) ? "disabled" : "";
+                            //var proximaDisabled = (Model.Info.Proxima > )
+                        }
+                        <li class="@anteriorDisabled">
+                            <a asp-action="Index" asp-route-pagina="@Model.Info.Anterior" class="grey-text text-lighten-2">
+                                <i class="material-icons">chevron_left</i>
+                            </a>
+                        </li>
+                        <li class="active waves-effect red">
+                            <a href="#!" class="white-text">@Model.Info.Atual</a>
+                        </li>
+                        <li class="waves-effect">
+                            <a asp-action="Index" asp-route-pagina="@Model.Info.Proxima" class="grey-text">
+                                <i class="material-icons">chevron_right</i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--ul.pagination-->
+                </div>
+            </div>
+            <!--div.card-->
+        </div>
+        
+    </div>
+</div>
+
+
+
+
