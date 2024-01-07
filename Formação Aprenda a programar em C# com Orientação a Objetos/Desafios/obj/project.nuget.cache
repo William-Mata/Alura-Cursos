@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "BJPOiIJsEolxU97NU7li213o5xpuo2euCkJXgBJRFAVoiPj08xfGK29fAu7Hksl8wk9x7pciU2zXS9ohv9dwMg==",
+  "dgSpecHash": "PT7kstuWdukTVg3jLBWbeajgjDRFyqUshyyZeQ+ZKYJlLBpRBtvMp+tbKX3j5ambmkK1Br6hP4RWY8zRZGt8hg==",
   "success": true,
   "projectFilePath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Formação Aprenda a programar em C# com Orientação a Objetos\\Desafios\\Desafios.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

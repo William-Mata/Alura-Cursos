@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "1XB0hVMqxzuyh9VQHsi5/+pUlIOLtX4V1jcT/SPGce+RLQ52CO2wqfMlFoGzQz73yOdODScS1hFoyjsNfQ8CGQ==",
+  "dgSpecHash": "CMSinvu66xDal24ahy912+BUQbwmA6/4KFR5FS2mI9jo0q4OmQB3RESyMwL0zb/TiwH/I9R6MAlWboekhHcWaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\\ByteBankIO\\ByteBankIO\\ByteBankIO.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
   "logs": []
 }

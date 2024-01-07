@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4doQNExnuM67ZjyA3y9/aLrCFVfO2PY+TT9z7oF/y/UdQ/3AoOdxoeDtu2nb2W9aL2bWjZxpq21L4KhB01XOHw==",
+  "dgSpecHash": "DP3p3Q0Uoybi7yzi7sZ+PaGSm4tp+WYiyyFzy0+S20piPsxaXyinTRPckkHJLZP/2lbzMrDy6Nha20v+AvQxSQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Formação Aprenda a programar em C# com Orientação a Objetos\\Screen Sound 3\\Screen Sound 3.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,11 @@
     "C:\\Users\\willi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\openai\\1.7.2\\openai.1.7.2.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
+    "C:\\Users\\willi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tZvlGeWL7HkBC/YaL+wr2l5Y3fi/HG4fOKJ+EFn2OZnxWJ9Q89uHPMarh2fipV56Nb8foDpg84Jn3bce3XRVQw==",
+  "dgSpecHash": "nqYrPzysbur7KFZDO1Sx0wGVb9lnR5yoYVg/YaKqYUkzApP+CTfy6LFr/dktYA5EjlEL5AhOajZPdVKAeW1iTg==",
   "success": true,
   "projectFilePath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Formação Aprenda a programar em C# com Orientação a Objetos\\Screen Sound 4\\Screen Sound 4.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

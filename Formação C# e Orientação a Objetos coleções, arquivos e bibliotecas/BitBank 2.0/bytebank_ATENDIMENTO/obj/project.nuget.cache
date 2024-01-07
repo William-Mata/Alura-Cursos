@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KFWqHBHU+Sy8unYfe2HolduANufWGb+p1tNqHjs9AD5iRhb8E2UBpClM9QylgDyrIiK+2aVNOqOJz6GDfIrZtg==",
+  "dgSpecHash": "QNRLDlYOIhXIP5Go2a9KoFCbO1BjxESW/727Z+dsrkX5rBSAUpIJYcyOWrDR3AAQ6OJbnz7YxDslMs8gkkMUKg==",
   "success": true,
   "projectFilePath": "C:\\Users\\willi\\OneDrive\\Documentos\\GitHub\\Alura-Cursos\\Formação C# e Orientação a Objetos coleções, arquivos e bibliotecas\\BitBank 2.0\\bytebank_ATENDIMENTO\\bytebank_ATENDIMENTO.csproj",
   "expectedPackageFiles": [
@@ -34,7 +34,11 @@
     "C:\\Users\\willi\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\willi\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\willi\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }
