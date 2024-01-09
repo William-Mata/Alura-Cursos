@@ -1,31 +1,21 @@
-﻿using Alura.Adopet.Console.Menu;
+﻿using Alura.Adopet.Console.Comands;
+using Alura.Adopet.Console.Comands.Interfaces;
+using System.Linq;
 
 Console.ForegroundColor = ConsoleColor.Green;
 
 try
 {
     string comandosASerExecutado = args[0].Trim();
+    var comandosDoSsistema = new ComandosDoSsistema()[comandosASerExecutado];
 
-    switch (comandosASerExecutado)
+    if (comandosDoSsistema != null)
     {
-        case "import":
-            Import importa = new Import();
-            await importa.ImportacaoDeArquivoPetAsync(caminhoDoArquivoDeImportacao: args[1]);
-            break;
-        case "help":
-            var comandoHelpASerExibido = args;
-            new Help().ExibirHelp(comandoHelpASerExibido);
-            break;
-        case "show":
-            var caminhoDoArquivoASerLido = Path.GetFullPath($"lista.csv");
-            Show.ListarPetsArquivo(caminhoDoArquivoASerLido);
-            break;
-        case "list":
-            await ListPets.ListarPetsAsync();
-            break;
-        default:
-            Console.WriteLine("Comando inválido!");
-            break;
+       await comandosDoSsistema.ExecutarAsync(args); 
+    }
+    else
+    {
+        Console.WriteLine("Comando inválido!");
     }
 }
 catch (Exception ex)

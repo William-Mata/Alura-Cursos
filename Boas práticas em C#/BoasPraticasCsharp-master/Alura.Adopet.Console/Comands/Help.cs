@@ -1,11 +1,10 @@
-﻿using Alura.Adopet.Console.Util;
+﻿using Alura.Adopet.Console.Comands.Interfaces;
 using System.Reflection;
-using System.Reflection.Metadata;
 
-namespace Alura.Adopet.Console.Menu;
+namespace Alura.Adopet.Console.Comands;
 
 [DocComando("help", " adopet help < parametro > ou simplemente adopet help comando que exibe informações de ajuda dos comandos.")]
-public class Help
+public class Help : IComando
 {
     private Dictionary<string, DocComando> _docs;
 
@@ -17,7 +16,13 @@ public class Help
             .ToDictionary(d => d.Instrucao);
     }
 
-    public void ExibirHelp(string[] comandoHelpASerExibido)
+    public Task ExecutarAsync(string[] args)
+    {
+        this.ExibirHelp(args);
+        return Task.CompletedTask;
+    }
+
+    private void ExibirHelp(string[] comandoHelpASerExibido)
     {
         System.Console.WriteLine("Lista de comandos.");
 

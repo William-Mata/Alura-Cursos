@@ -1,13 +1,17 @@
-﻿using Alura.Adopet.Console.Models;
+﻿using Alura.Adopet.Console.Comands.Interfaces;
 using Alura.Adopet.Console.Services;
-using Alura.Adopet.Console.Util;
 
-namespace Alura.Adopet.Console.Menu;
+namespace Alura.Adopet.Console.Comands;
 
 [DocComando("list", " adopet list comando que exibe no terminal a lista de pets já importados.")]
-public static class ListPets
+public class ListPets : IComando
 {
-    public static async Task ListarPetsAsync()
+    public async Task ExecutarAsync(string[] args)
+    {
+        await this.ListarPetsAsync();
+    }
+
+    public async Task ListarPetsAsync()
     {
         ServicePetAPI _servicePetAPI = new ServicePetAPI();
         var pets = await _servicePetAPI.ListPetsAsync();

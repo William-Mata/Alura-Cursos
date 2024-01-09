@@ -1,11 +1,12 @@
-﻿using Alura.Adopet.Console.Models;
+﻿using Alura.Adopet.Console.Comands.Interfaces;
+using Alura.Adopet.Console.Models;
 using Alura.Adopet.Console.Services;
 using Alura.Adopet.Console.Util;
 
-namespace Alura.Adopet.Console.Menu;
+namespace Alura.Adopet.Console.Comands;
 
 [DocComando("Import", " adopet import <arquivo> comando que realiza a importação do arquivo de pets.")]
-public class Import
+public class Import : IComando
 {
     private ServicePetAPI _servicePetAPI;
 
@@ -14,7 +15,12 @@ public class Import
         _servicePetAPI = new ServicePetAPI();
     }
 
-    public async Task ImportacaoDeArquivoPetAsync(string caminhoDoArquivoDeImportacao)
+    public async Task ExecutarAsync(string[] args)
+    {
+        await ImportacaoDeArquivoPetAsync(caminhoDoArquivoDeImportacao: args[1]);
+    }
+
+    private async Task ImportacaoDeArquivoPetAsync(string caminhoDoArquivoDeImportacao)
     {
         IEnumerable<Pet> listaDePet = Arquivo.ExtrairConteudoArquivoPets(caminhoDoArquivoDeImportacao);
 
