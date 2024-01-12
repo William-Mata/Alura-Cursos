@@ -4,14 +4,13 @@ using System.Net.Http.Json;
 
 namespace Alura.Adopet.Console.Services;
 
-public class ServicePetAPI
+public class ServicePetAPI : IDisposable
 {
-    private static string _urlAPI = "http://localhost:5057";
     private Client _client;
 
-    public ServicePetAPI()
+    public ServicePetAPI(string url = "http://localhost:5057")
     {
-        this._client = new Client(url: _urlAPI);
+        this._client = new Client(url: url);
     }
 
     public Task<HttpResponseMessage> CreatePetAsync(Pet pet)
@@ -28,4 +27,10 @@ public class ServicePetAPI
         HttpResponseMessage response = await _client.httpCliente.GetAsync("pet/list");
         return await response.Content.ReadFromJsonAsync<IEnumerable<Pet>>();
     }
+
+    public void Dispose()
+    {
+        _client.httpCliente.Dispose();
+    }
+
 }

@@ -1,4 +1,5 @@
 ﻿using Alura.Adopet.Console.Comands.Interfaces;
+using Alura.Adopet.Console.Utils;
 using System.Reflection;
 
 namespace Alura.Adopet.Console.Comands;
@@ -10,10 +11,7 @@ public class Help : IComando
 
     public Help()
     {
-        _docs = Assembly.GetExecutingAssembly().GetTypes()
-            .Where(t => t.GetCustomAttributes<DocComando>().Any())
-            .Select(t => t.GetCustomAttribute<DocComando>()!)
-            .ToDictionary(d => d.Instrucao);
+        _docs =  DocumentcaoSistema.ToDictionary(Assembly.GetExecutingAssembly());
     }
 
     public Task ExecutarAsync(string[] args)
