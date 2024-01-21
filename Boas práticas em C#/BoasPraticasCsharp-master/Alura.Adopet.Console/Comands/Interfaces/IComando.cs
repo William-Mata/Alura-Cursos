@@ -1,6 +1,8 @@
-﻿namespace Alura.Adopet.Console.Comands.Interfaces;
+﻿using FluentResults;
+
+namespace Alura.Adopet.Console.Comands.Interfaces;
 
 public interface IComando
 {
-    Task ExecutarAsync(string[] args);
+    Task<Result> ExecutarAsync(string[] args);
 }

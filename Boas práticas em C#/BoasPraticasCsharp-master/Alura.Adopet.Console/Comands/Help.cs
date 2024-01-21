@@ -1,5 +1,7 @@
 ﻿using Alura.Adopet.Console.Comands.Interfaces;
 using Alura.Adopet.Console.Utils;
+using FluentResults;
+using System;
 using System.Reflection;
 
 namespace Alura.Adopet.Console.Comands;
@@ -14,10 +16,17 @@ public class Help : IComando
         _docs =  DocumentcaoSistema.ToDictionary(Assembly.GetExecutingAssembly());
     }
 
-    public Task ExecutarAsync(string[] args)
+    public Task<Result> ExecutarAsync(string[] args)
     {
-        this.ExibirHelp(args);
-        return Task.CompletedTask;
+        try 
+        { 
+            this.ExibirHelp(args);
+            return Task.FromResult(Result.Ok());
+        }
+        catch (Exception exception)
+        {
+            return Task.FromResult(Result.Fail(new Error("Exibição da documentação falhou!").CausedBy(exception)));
+        }
     }
 
     private void ExibirHelp(string[] comandoHelpASerExibido)

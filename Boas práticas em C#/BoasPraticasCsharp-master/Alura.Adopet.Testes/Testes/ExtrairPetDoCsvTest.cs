@@ -5,6 +5,12 @@ namespace Alura.Adopet.Testes.Testes;
 
 public class ExtrairPetDoCsvTest
 {
+    private Arquivo _arquivo;
+
+    public ExtrairPetDoCsvTest()
+    {
+        _arquivo = new Arquivo("");
+    }
 
     [Fact]
     public void VerificarSeExtracaoDePetDoCsvEValida()
@@ -13,7 +19,7 @@ public class ExtrairPetDoCsvTest
         var linhaPetTexto = $"{new Guid()}; Pretinha; 1";
 
         //Act
-        Pet pet = linhaPetTexto.ExtrairPetPorLinha();
+        Pet pet = _arquivo.ExtrairPetPorLinha(linhaPetTexto);
 
         // Assert
         Assert.NotNull(pet);
@@ -27,9 +33,8 @@ public class ExtrairPetDoCsvTest
         //Arrange
         //Act
         // Assert
-        Assert.ThrowsAny<ArgumentNullException>(() => linhaPetTexto.ExtrairPetPorLinha());
+        Assert.ThrowsAny<ArgumentNullException>(() => _arquivo.ExtrairPetPorLinha(linhaPetTexto));
     }
-
 
     [Fact]
     public void VerificarErroAoEnviarInformacoesIncompleta()
@@ -39,7 +44,7 @@ public class ExtrairPetDoCsvTest
 
         //Act
         // Assert
-        Assert.ThrowsAny<ArgumentOutOfRangeException>(() => linhaPetTexto.ExtrairPetPorLinha());
+        Assert.ThrowsAny<ArgumentOutOfRangeException>(() => _arquivo.ExtrairPetPorLinha(linhaPetTexto));
     }
 
     [Fact]
@@ -50,7 +55,7 @@ public class ExtrairPetDoCsvTest
 
         //Act
         // Assert
-        Assert.ThrowsAny<ArgumentException>(() => linhaPetTexto.ExtrairPetPorLinha());
+        Assert.ThrowsAny<ArgumentException>(() => _arquivo.ExtrairPetPorLinha(linhaPetTexto));
     }
 
     [Fact]
@@ -61,6 +66,6 @@ public class ExtrairPetDoCsvTest
 
         //Act
         // Assert
-        Assert.ThrowsAny<ArgumentException>(() => linhaPetTexto.ExtrairPetPorLinha());
+        Assert.ThrowsAny<ArgumentException>(() => _arquivo.ExtrairPetPorLinha(linhaPetTexto));
     }
 }

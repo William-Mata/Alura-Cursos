@@ -2,27 +2,41 @@
 
 namespace Alura.Adopet.Console.Util;
 
-public static class Arquivo
+public class Arquivo
 {
-    public static IEnumerable<Pet> ExtrairConteudoArquivoPets(string caminhoDoArquivoDeImportacao)
+    private string _caminhoDoArquivoDeImportacao;
+    private List<Pet> _listaDePet;
+
+    public Arquivo(string caminhoDoArquivoDeImportacao)
     {
-        List<Pet> listaDePet = new List<Pet>();
-
-        using (StreamReader linhaDePropriedadesSeparadasPorVirgulas = new StreamReader(caminhoDoArquivoDeImportacao))
-        {
-            while (!linhaDePropriedadesSeparadasPorVirgulas.EndOfStream)
-            {
-                var stringPropriedadesPet = linhaDePropriedadesSeparadasPorVirgulas.ReadLine()!;
-                var pet = ExtrairPetPorLinha(stringPropriedadesPet);
-
-                listaDePet.Add(pet);
-            }
-        }
-
-        return listaDePet;
+        _caminhoDoArquivoDeImportacao = caminhoDoArquivoDeImportacao;
+        _listaDePet = new List<Pet>();
     }
 
-    public static Pet ExtrairPetPorLinha(this string linha)
+    public virtual IEnumerable<Pet> LeitorConteudoArquivoPets()
+    {
+        if (File.Exists(_caminhoDoArquivoDeImportacao))
+        {
+            using (StreamReader linhaDePropriedadesSeparadasPorVirgulas = new StreamReader(_caminhoDoArquivoDeImportacao))
+            {
+                while (!linhaDePropriedadesSeparadasPorVirgulas.EndOfStream)
+                {
+                    var stringPropriedadesPet = linhaDePropriedadesSeparadasPorVirgulas.ReadLine()!;
+                    var pet = ExtrairPetPorLinha(stringPropriedadesPet);
+
+                    _listaDePet.Add(pet);
+                }
+            }
+
+            return _listaDePet;
+        }
+        else
+        {
+            throw new Exception("Arquivo não encontrado");
+        }
+    }
+
+    public Pet ExtrairPetPorLinha(string linha)
     {
         if (string.IsNullOrEmpty(linha))
         {
@@ -54,5 +68,4 @@ public static class Arquivo
 
         return pet;
     }
-
 }

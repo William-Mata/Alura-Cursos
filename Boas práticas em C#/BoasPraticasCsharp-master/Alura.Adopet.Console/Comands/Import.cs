@@ -2,6 +2,8 @@
 using Alura.Adopet.Console.Models;
 using Alura.Adopet.Console.Services;
 using Alura.Adopet.Console.Util;
+using Alura.Adopet.Console.Utils;
+using FluentResults;
 
 namespace Alura.Adopet.Console.Comands;
 
@@ -9,35 +11,36 @@ namespace Alura.Adopet.Console.Comands;
 public class Import : IComando
 {
     private ServicePetAPI _servicePetAPI;
+    private Arquivo _aquivo;
 
-    public Import()
+    public Import(ServicePetAPI servicePetAPI, Arquivo arquivo)
     {
-        _servicePetAPI = new ServicePetAPI();
+        _servicePetAPI = servicePetAPI;
+        _aquivo = arquivo!;
     }
 
-    public async Task ExecutarAsync(string[] args)
+    public async Task<Result> ExecutarAsync(string[] args)
     {
-        await ImportacaoDeArquivoPetAsync(caminhoDoArquivoDeImportacao: args[1]);
+        return await ImportacaoDeArquivoPetAsync();
     }
 
-    private async Task ImportacaoDeArquivoPetAsync(string caminhoDoArquivoDeImportacao)
+    private async Task<Result> ImportacaoDeArquivoPetAsync()
     {
-        IEnumerable<Pet> listaDePet = Arquivo.ExtrairConteudoArquivoPets(caminhoDoArquivoDeImportacao);
-
-        foreach (var pet in listaDePet)
-        {
-            try
+        try
+        {    
+            IEnumerable<Pet> listaDePet = _aquivo.LeitorConteudoArquivoPets();
+            foreach (var pet in listaDePet)
             {
                 var resposta = await _servicePetAPI.CreatePetAsync(pet);
                 System.Console.WriteLine(pet);
             }
-            catch (Exception ex)
-            {
-                System.Console.WriteLine(ex.Message);
-            }
+
+            System.Console.WriteLine("Importação concluída!");
+            return Result.Ok().WithSuccess(new SucessPet(listaDePet));
+
+        }catch (Exception ex)
+        {
+            return Result.Fail(new Error(ex.Message).CausedBy(ex));
         }
-
-        System.Console.WriteLine("Importação concluída!");
     }
-
 }
