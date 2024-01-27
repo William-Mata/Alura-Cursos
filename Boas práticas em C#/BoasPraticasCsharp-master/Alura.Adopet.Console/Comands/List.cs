@@ -1,5 +1,6 @@
 ﻿using Alura.Adopet.Console.Comands.Interfaces;
 using Alura.Adopet.Console.Services;
+using Alura.Adopet.Console.Utils;
 using FluentResults;
 using System;
 
@@ -18,9 +19,8 @@ public class List : IComando
     public async Task<Result> ExecutarAsync(string[] args)
     {
         try 
-        { 
-            await this.ListarPetsAsync();
-            return Result.Ok();
+        {
+            return await this.ListarPetsAsync();
         }
         catch (Exception exception)
         {
@@ -28,15 +28,10 @@ public class List : IComando
         }
     }
 
-    public async Task<Result> ListarPetsAsync()
+    private async Task<Result> ListarPetsAsync()
     {
         var pets = await _servicePetAPI.ListPetsAsync();
 
-        foreach (var pet in pets)
-        {
-            System.Console.WriteLine(pet);
-        }
-
-        return Result.Ok();
+        return Result.Ok().WithSuccess(new SucessPet(pets!, "Lista de Pets")); ;
     }
 }

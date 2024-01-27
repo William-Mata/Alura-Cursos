@@ -1,7 +1,9 @@
 ﻿using Alura.Adopet.Console.Comands;
 using Alura.Adopet.Console.Comands.Interfaces;
 using Alura.Adopet.Console.Services;
+using Alura.Adopet.Console.UI;
 using Alura.Adopet.Console.Util;
+using FluentResults;
 
 ServicePetAPI servicePetApi = new ServicePetAPI(new HttpClientFactory().CreateClient());
 Arquivo arquivo = new Arquivo("");
@@ -19,27 +21,14 @@ Dictionary<string, IComando> comandosDoSistema = new()
     {"list", new List(servicePetApi)}
 };
 
-Console.ForegroundColor = ConsoleColor.Green;
-
-try
+string comandosASerExecutado = args[0].Trim();
+if (comandosDoSistema.ContainsKey(comandosASerExecutado))
 {
-    string comandosASerExecutado = args[0].Trim();
-    if (comandosDoSistema.ContainsKey(comandosASerExecutado))
-    {
-        IComando? comando = comandosDoSistema[comandosASerExecutado];
-        await comando.ExecutarAsync(args); 
-    }
-    else
-    {
-        Console.WriteLine("Comando inválido!");
-    }
+    IComando? comando = comandosDoSistema[comandosASerExecutado];
+    var result = await comando.ExecutarAsync(args); 
+    ConsoleUI.ExibirResultado(result);
 }
-catch (Exception ex)
+else
 {
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine($"Aconteceu um exceção: {ex.Message}");
-}
-finally
-{
-    Console.ForegroundColor = ConsoleColor.White;
+    ConsoleUI.ExibirResultado(Result.Fail("Comando inválido!"));
 }

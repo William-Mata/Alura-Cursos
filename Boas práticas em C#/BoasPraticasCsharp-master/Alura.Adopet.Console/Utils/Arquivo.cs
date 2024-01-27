@@ -32,7 +32,7 @@ public class Arquivo
         }
         else
         {
-            throw new Exception("Arquivo não encontrado");
+            throw new FileNotFoundException("Arquivo não encontrado");
         }
     }
 

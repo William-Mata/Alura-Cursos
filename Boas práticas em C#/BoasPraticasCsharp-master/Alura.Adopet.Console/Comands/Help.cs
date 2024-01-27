@@ -19,9 +19,8 @@ public class Help : IComando
     public Task<Result> ExecutarAsync(string[] args)
     {
         try 
-        { 
-            this.ExibirHelp(args);
-            return Task.FromResult(Result.Ok());
+        {
+            return this.ExibirHelp(args);
         }
         catch (Exception exception)
         {
@@ -29,31 +28,34 @@ public class Help : IComando
         }
     }
 
-    private void ExibirHelp(string[] comandoHelpASerExibido)
+    private Task<Result> ExibirHelp(string[] comandoHelpASerExibido)
     {
-        System.Console.WriteLine("Lista de comandos.");
+        List<string> docs = new();
+        docs.Add("Lista de Comandos");
 
         if (comandoHelpASerExibido.Length == 1)
         {
-            System.Console.WriteLine("adopet help <parametro> ous simplemente adopet help comando que exibe informações de ajuda dos comandos.");
-            System.Console.WriteLine("Adopet (1.0) - Aplicativo de linha de comando (CLI).");
-            System.Console.WriteLine("Realiza a importação em lote de um arquivos de pets.");
-            System.Console.WriteLine("Comando possíveis: ");
-
-            foreach(var doc in _docs.Values)
-            {
-                System.Console.WriteLine($"{doc.Documentacao}");
-            }
+            docs.Add("adopet help <parametro> ous simplemente adopet help comando que exibe informações de ajuda dos comandos.");
+            docs.Add("Adopet (1.0) - Aplicativo de linha de comando (CLI).");
+            docs.Add("Realiza a importação em lote de um arquivos de pets.");
+            docs.Add("Comando possíveis: ");
+            docs.AddRange(_docs.Values.Select(x => x.Documentacao));
+            
         }
         else if (comandoHelpASerExibido.Length == 2)
         {
-
             string comandoHelp = comandoHelpASerExibido[1];
 
             if (_docs.ContainsKey(comandoHelp))
             {
-                System.Console.WriteLine(_docs[comandoHelp].Documentacao);
+                docs.Add(_docs[comandoHelp].Documentacao);
+            }
+            else
+            {
+                docs.Add("Não foi encontrado uma documentação para o comando informado.");
             }
         }
+
+        return Task.FromResult(Result.Ok().WithSuccess(new SucessDocs(docs)));
     }
 }

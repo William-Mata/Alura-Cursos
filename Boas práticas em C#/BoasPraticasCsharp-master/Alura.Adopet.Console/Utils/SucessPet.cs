@@ -7,8 +7,9 @@ public class SucessPet : Success
 {
     public IEnumerable<Pet> Data { get;}
 
-    public SucessPet(IEnumerable<Pet> data)
+    public SucessPet(IEnumerable<Pet> data, string mensagem) : base(mensagem)
     {
         Data = data;
     }
+
 }

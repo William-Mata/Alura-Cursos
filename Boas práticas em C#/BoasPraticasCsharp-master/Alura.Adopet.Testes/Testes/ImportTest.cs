@@ -37,8 +37,11 @@ public class ImportTest
         string[] args = { "import", "listadas.csv" };
         var import = new Import(servicePetApi.Object, arquivo.Object);
 
-        //Act+Assert
-        await Assert.ThrowsAnyAsync<Exception>(() => import.ExecutarAsync(args));
+        //Act
+        var result = await import.ExecutarAsync(args);
+
+        //Assert
+         Assert.True(result.HasException<Exception>());
     }
 
     [Fact]
@@ -55,11 +58,11 @@ public class ImportTest
         var import = new Import(servicePetApi.Object, arquivo.Object);
 
         //Act
-        var resultado = import.ExecutarAsync(args);
-        var petsRetorno = (SucessPet)resultado.Result!.Successes[0];
+        var resultado = await import.ExecutarAsync(args);
+        var petsRetorno = (SucessPet)resultado.Successes[0];
 
         //Assert
-        Assert.True(resultado.IsCompletedSuccessfully);
+        Assert.True(resultado.IsSuccess);
         Assert.Equal("Lima", petsRetorno.Data.First().Nome);
     }
 
@@ -77,9 +80,9 @@ public class ImportTest
         var import = new Import(servicePetApi.Object, arquivo.Object);
 
         //Act
-        var resultado = import.ExecutarAsync(args);
+        var resultado = await import.ExecutarAsync(args);
 
         //Assert
-        Assert.True(resultado.Result.IsFailed);
+        Assert.True(resultado.IsFailed);
     }
 }

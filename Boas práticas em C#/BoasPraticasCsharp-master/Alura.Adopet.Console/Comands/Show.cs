@@ -1,6 +1,7 @@
 ﻿using Alura.Adopet.Console.Comands.Interfaces;
 using Alura.Adopet.Console.Models;
 using Alura.Adopet.Console.Util;
+using Alura.Adopet.Console.Utils;
 using FluentResults;
 
 namespace Alura.Adopet.Console.Comands;
@@ -9,18 +10,17 @@ namespace Alura.Adopet.Console.Comands;
 public class Show : IComando
 {
     private Arquivo _arquivo;
-    private Arquivo arquivo;
 
     public Show(Arquivo arquivo)
     {
-        this.arquivo = arquivo;
+        this._arquivo = arquivo;
     }
 
     public Task<Result> ExecutarAsync(string[] args)
     {
-        try { 
-            ListarPetsArquivo(caminhoArquivo:args[1]);
-            return Task.FromResult(Result.Ok());
+        try
+        {   
+            return ListarPetsArquivo(caminhoArquivo: args[1]);
         }
         catch (Exception exception)
         {
@@ -28,16 +28,10 @@ public class Show : IComando
         }
     }
 
-    public void ListarPetsArquivo(string caminhoArquivo)
+    public Task<Result> ListarPetsArquivo(string caminhoArquivo)
     {
-        _arquivo = new Arquivo(caminhoArquivo);
-        caminhoArquivo = Path.GetFullPath(caminhoArquivo);
         IEnumerable<Pet> listaPets = _arquivo.LeitorConteudoArquivoPets();
 
-        System.Console.WriteLine("----- Serão importados os dados abaixo -----");
-        foreach (var pet in listaPets)
-        {
-            System.Console.WriteLine($"{pet}");
-        }
+        return Task.FromResult(Result.Ok().WithSuccess(new SucessPet(listaPets, "Serão importados os dados acima")));
     }
 }

@@ -7,7 +7,7 @@ using FluentResults;
 
 namespace Alura.Adopet.Console.Comands;
 
-[DocComando("Import", " adopet import <arquivo> comando que realiza a importação do arquivo de pets.")]
+[DocComando("import", " adopet import <arquivo> comando que realiza a importação do arquivo de pets.")]
 public class Import : IComando
 {
     private ServicePetAPI _servicePetAPI;
@@ -21,22 +21,27 @@ public class Import : IComando
 
     public async Task<Result> ExecutarAsync(string[] args)
     {
-        return await ImportacaoDeArquivoPetAsync();
+        try
+        {
+            IEnumerable<Pet> listaDePet = _aquivo.LeitorConteudoArquivoPets();
+            return await ImportacaoDeArquivoPetAsync(listaDePet);
+        }
+        catch (Exception ex)
+        {
+            return Result.Fail(new Error(ex.Message).CausedBy(ex));
+        }
     }
 
-    private async Task<Result> ImportacaoDeArquivoPetAsync()
+    private async Task<Result> ImportacaoDeArquivoPetAsync(IEnumerable<Pet> listaDePet)
     {
         try
         {    
-            IEnumerable<Pet> listaDePet = _aquivo.LeitorConteudoArquivoPets();
             foreach (var pet in listaDePet)
             {
                 var resposta = await _servicePetAPI.CreatePetAsync(pet);
-                System.Console.WriteLine(pet);
             }
 
-            System.Console.WriteLine("Importação concluída!");
-            return Result.Ok().WithSuccess(new SucessPet(listaDePet));
+            return Result.Ok().WithSuccess(new SucessPet(listaDePet, "Importação concluída!"));
 
         }catch (Exception ex)
         {
