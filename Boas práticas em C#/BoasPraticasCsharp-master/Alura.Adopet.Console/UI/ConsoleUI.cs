@@ -33,7 +33,7 @@ public static class ConsoleUI
 
         switch (sucess)
         {
-            case SucessPet s:
+            case SucessPets s:
                 ExibirPets(s);
                 break;
             case SucessDocs h:
@@ -50,7 +50,7 @@ public static class ConsoleUI
         }
     }
 
-    private static void ExibirPets(SucessPet sucess)
+    private static void ExibirPets(SucessPets sucess)
     {
         foreach(var pet in sucess.Data)
         {

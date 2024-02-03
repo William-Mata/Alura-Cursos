@@ -3,11 +3,11 @@ using FluentResults;
 
 namespace Alura.Adopet.Console.Utils;
 
-public class SucessPet : Success
+public class SucessPets : Success
 {
     public IEnumerable<Pet> Data { get;}
 
-    public SucessPet(IEnumerable<Pet> data, string mensagem) : base(mensagem)
+    public SucessPets(IEnumerable<Pet> data, string mensagem) : base(mensagem)
     {
         Data = data;
     }

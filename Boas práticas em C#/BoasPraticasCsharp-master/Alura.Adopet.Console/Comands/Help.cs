@@ -10,17 +10,19 @@ namespace Alura.Adopet.Console.Comands;
 public class Help : IComando
 {
     private Dictionary<string, DocComando> _docs;
+    private string? _comando;
 
-    public Help()
+    public Help(string? comando)
     {
+        _comando = comando;
         _docs =  DocumentcaoSistema.ToDictionary(Assembly.GetExecutingAssembly());
     }
 
-    public Task<Result> ExecutarAsync(string[] args)
+    public Task<Result> ExecutarAsync()
     {
         try 
         {
-            return this.ExibirHelp(args);
+            return this.ExibirHelp();
         }
         catch (Exception exception)
         {
@@ -28,12 +30,12 @@ public class Help : IComando
         }
     }
 
-    private Task<Result> ExibirHelp(string[] comandoHelpASerExibido)
+    private Task<Result> ExibirHelp()
     {
         List<string> docs = new();
         docs.Add("Lista de Comandos");
 
-        if (comandoHelpASerExibido.Length == 1)
+        if (_comando == null)
         {
             docs.Add("adopet help <parametro> ous simplemente adopet help comando que exibe informações de ajuda dos comandos.");
             docs.Add("Adopet (1.0) - Aplicativo de linha de comando (CLI).");
@@ -42,13 +44,11 @@ public class Help : IComando
             docs.AddRange(_docs.Values.Select(x => x.Documentacao));
             
         }
-        else if (comandoHelpASerExibido.Length == 2)
+        else if (_comando != null)
         {
-            string comandoHelp = comandoHelpASerExibido[1];
-
-            if (_docs.ContainsKey(comandoHelp))
+            if (_docs.ContainsKey(_comando))
             {
-                docs.Add(_docs[comandoHelp].Documentacao);
+                docs.Add(_docs[_comando].Documentacao);
             }
             else
             {

@@ -19,7 +19,7 @@ public class Import : IComando
         _aquivo = arquivo!;
     }
 
-    public async Task<Result> ExecutarAsync(string[] args)
+    public async Task<Result> ExecutarAsync()
     {
         try
         {
@@ -41,7 +41,7 @@ public class Import : IComando
                 var resposta = await _servicePetAPI.CreatePetAsync(pet);
             }
 
-            return Result.Ok().WithSuccess(new SucessPet(listaDePet, "Importação concluída!"));
+            return Result.Ok().WithSuccess(new SucessPets(listaDePet, "Importação concluída!"));
 
         }catch (Exception ex)
         {

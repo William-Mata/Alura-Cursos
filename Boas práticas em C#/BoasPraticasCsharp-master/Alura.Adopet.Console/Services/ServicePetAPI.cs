@@ -17,7 +17,7 @@ public class ServicePetAPI
         return _client.PostAsJsonAsync("pet/add", pet);
     }
 
-    public async Task<IEnumerable<Pet>?> ListPetsAsync()
+    public virtual async Task<IEnumerable<Pet>?> ListPetsAsync()
     {
         HttpResponseMessage response = await _client.GetAsync("pet/list");
         return await response.Content.ReadFromJsonAsync<IEnumerable<Pet>>();

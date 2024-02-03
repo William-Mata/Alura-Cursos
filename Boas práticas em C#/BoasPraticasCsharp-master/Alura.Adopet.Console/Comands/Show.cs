@@ -16,11 +16,11 @@ public class Show : IComando
         this._arquivo = arquivo;
     }
 
-    public Task<Result> ExecutarAsync(string[] args)
+    public Task<Result> ExecutarAsync()
     {
         try
         {   
-            return ListarPetsArquivo(caminhoArquivo: args[1]);
+            return ListarPetsArquivo();
         }
         catch (Exception exception)
         {
@@ -28,10 +28,10 @@ public class Show : IComando
         }
     }
 
-    public Task<Result> ListarPetsArquivo(string caminhoArquivo)
+    public Task<Result> ListarPetsArquivo()
     {
         IEnumerable<Pet> listaPets = _arquivo.LeitorConteudoArquivoPets();
 
-        return Task.FromResult(Result.Ok().WithSuccess(new SucessPet(listaPets, "Serão importados os dados acima")));
+        return Task.FromResult(Result.Ok().WithSuccess(new SucessPets(listaPets, "Serão importados os dados acima")));
     }
 }

@@ -16,10 +16,9 @@ public class ImportTest
         var arquivo = ArquivoBuilder.CriarMock(pets);
         var servicePetApi = ServicePetAPIBuilder.CriarMock();
         var import = new Import(servicePetApi.Object, arquivo.Object);
-        string[] args = { "import", "lista.csv" };
 
         // Act
-        await import.ExecutarAsync(args);
+        await import.ExecutarAsync();
 
         // Assert
         servicePetApi.Verify(_ => _.CreatePetAsync(It.IsAny<Pet>()), Times.Never);
@@ -34,11 +33,10 @@ public class ImportTest
         arquivo.Setup(_ => _.LeitorConteudoArquivoPets()).Throws<FileNotFoundException>();
 
         var servicePetApi = ServicePetAPIBuilder.CriarMock();
-        string[] args = { "import", "listadas.csv" };
         var import = new Import(servicePetApi.Object, arquivo.Object);
 
         //Act
-        var result = await import.ExecutarAsync(args);
+        var result = await import.ExecutarAsync();
 
         //Assert
          Assert.True(result.HasException<Exception>());
@@ -54,12 +52,11 @@ public class ImportTest
         var arquivo = ArquivoBuilder.CriarMock(listaDePet);
 
         var servicePetApi = ServicePetAPIBuilder.CriarMock();
-        string[] args = { "import", "lista.csv" };
         var import = new Import(servicePetApi.Object, arquivo.Object);
 
         //Act
-        var resultado = await import.ExecutarAsync(args);
-        var petsRetorno = (SucessPet)resultado.Successes[0];
+        var resultado = await import.ExecutarAsync();
+        var petsRetorno = (SucessPets)resultado.Successes[0];
 
         //Assert
         Assert.True(resultado.IsSuccess);
@@ -76,11 +73,10 @@ public class ImportTest
         arquivo.Setup(_ => _.LeitorConteudoArquivoPets()).Throws<FileNotFoundException>();
 
         var servicePetApi = ServicePetAPIBuilder.CriarMock();
-        string[] args = { "import", "lista.csv" };
         var import = new Import(servicePetApi.Object, arquivo.Object);
 
         //Act
-        var resultado = await import.ExecutarAsync(args);
+        var resultado = await import.ExecutarAsync();
 
         //Assert
         Assert.True(resultado.IsFailed);
